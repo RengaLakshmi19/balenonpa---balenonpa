@@ -1,4 +1,4 @@
-/*
+/*Test
 $(document).ready(function (){
              var entityList = $(".entitylist.entity-grid").eq(0);
     //checks if list is loaded
