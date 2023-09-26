@@ -1,0 +1,74 @@
+
+ .entitylist
+ {
+     padding:30px;
+     border-radius:20px;     
+     
+ }
+
+  .view-grid table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  /* border-style: ridge; */
+  width: 100%;
+  
+}
+.view-grid table td, table th {
+  border: 2px solid #ddd;
+  padding: 8px;
+
+}
+
+
+/* .view-grid table tr:nth-child(even){background-color: #EAF1DD;} */
+
+ .view-grid table tr:hover {background-color: #ddd;} 
+
+.view-grid table th,.view-grid table th a {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-align: left;
+  background-color: #f3a528;
+  color: white;
+} 
+
+/*  Download Receipt Button Stylesheet */
+.DownloadButton {
+ 
+  /* border: 2px solid #4CAF50; */
+ 
+  background-color: #f3a528 !important;
+  color: black;
+  border: 1px solid #000000; 
+
+
+  
+  
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.DownloadButton:hover {
+  color: white;
+  background-color: white;
+  border: none; 
+
+  /* background-color: #f3a528 !important;
+  color: black;
+  border: 1px solid #000000;  */
+        /* background-color: #f3a528;
+        border: 1px solid #000000; 
+        color: #000000; */
+}
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+adx_append: true
+adx_appendto: false
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: annotation
+adx_entityname: Portal Contact Form Table Permission_Attachment
+adx_entitypermissionid: 155f4d6c-1443-ee11-be6e-002248d5d3db
+adx_parententitypermission: 3f1d9057-bd41-ee11-be6e-002248d5d3db
+adx_parentrelationship: contact_Annotations
+adx_read: false
+adx_scope: 756150003
+adx_write: false

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+</head>
+<style>
+ /*********		SIGN IN 		*******/
+ #content {
+        height: 500px;
+        /* background-color: #815714; */
+        padding: 2%;
+        width: 63%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 12%;
+        margin-bottom: 4%;
+        box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+
+        /* background: #FF416C;
+                background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+                background: linear-gradient(to right, #FF4B2B, #FF416C);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 0 0;
+                color: #FFFFFF;
+                position: relative; */
+        /* left: -100%; */
+        /* height: 490px; 
+                width: 63%; */
+        /* transform: translateX(0);
+                transition: transform 0.6s ease-in-out; */
+
+        /* Style the container with the class "content" */
+        /* width: 300px; 
+                height: 150px; */
+
+        background: linear-gradient(to right, #f3a528 50%, #FFFFFF 50%);
+
+        /* background: linear-gradient(to top, #FFFFFF 83%, #f3a528 50%);  */
+
+        /* background: linear-gradient(to right, white 40%, #f3a528 20%, #f3a528 20%, #f52a56 50%, #f52a56 100%); */
+        /* background: linear-gradient(to right, #f3a528 0%, #f3a528 40%, red 40%, red 100%); */
+
+
+        border-radius: 20px;
+        /* border: 1px solid #ccc;  */
+        /* text-align: center;  */
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+    body {
+        background-color: #F6F5F7;
+        /* background-image: url(https://img.freepik.com/premium-photo/mockup-photo-frame-wooden-cabinet-with-beautiful-plants-3d-rendering_41470-3843.jpg); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+
+
+        /* background: #f6f5f7;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-family: 'Montserrat', sans-serif;
+                height: 100vh;
+                margin: -20px 0 50px; */
+
+    }
+
+    
+    .col-md-6 {
+        /* position: relative; */
+        /* min-height: 1px; */
+        /* padding-left: 15px; */
+        /* padding-right: 15px; */
+
+
+        color: #161617;
+        margin-left: 350px;
+        /* margin-right: 100px; */
+    }
+
+    .nav.nav-tabs.nav-account {
+        /* background-color: #f3a528; */
+        margin-left: 350px;
+
+
+    }
+
+
+    .nav-account {
+        margin-top: 0px;
+        /* background-color: #f3a528; */
+
+
+    }
+
+    .nav-tabs {}
+
+    .nav-tabs>li.active>a:hover {
+        background-color: #e3981f;
+        color: #FFFFFF;
+
+    }
+
+    .nav-tabs>li.active>a:focus {
+        background-color: #f3a528;
+        color: #FFFFFF;
+    }
+
+    .nav-tabs>li.active>a {
+        color: #FFFFFF;
+        background-color: #f3a528;
+        border: 1px solid #ddd;
+        border-bottom-color: transparent;
+        cursor: default;
+    }
+
+
+
+    .nav-tabs>li>a:hover {
+        background-color: #f3a528;
+        color: #FFFFFF;
+
+    }
+
+    .nav-tabs>li>a:focus {
+        background-color: #f3a528;
+        color: #FFFFFF;
+    }
+
+    .nav-tabs>li>a {
+
+        color: #000000;
+        /* background-color: #f3a528;
+                border: 1px solid #ddd;
+                border-bottom-color: transparent;
+                cursor: default; */
+
+    }
+    
+.login-heading-section {
+   
+    margin-top: 8PX;
+    margin-bottom: 20px;    
+    padding-bottom: 10px;   
+    line-height: 100%;
+    
+}
+label.control-label.required {
+    word-break: normal;
+}
+  
+
+
+/*********		Redeem Code Style		*******/
+
+
+.alert-info {
+    background-color: transparent;
+    /* border-color: #BCE8F1; */
+   margin-top: -10px;
+    color: #000;
+    margin-left: 350px;
+    
+}
+
+
+.alert {
+    padding: 0px;
+    margin-bottom: 0px;
+    border: 1px solid #f3a528;
+    border-radius: 0;
+    text-align:center;
+}
+
+
+
+
+/* .reg:hover
+{
+    color: #FFFFFF !important;
+    background-color: #f3a528;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+.reg
+{
+    color: #FFFFFF !important;
+    background-color: #f3a528;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    cursor: default;
+} */
+
+.custom-h1 {
+        font-weight: bold;
+        margin-top: 100px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+        margin-left: 0px;
+        align-items: center;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex-direction: column;
+        /* padding-left: 50px; ; */
+        /* padding-top: ; */
+        /* padding-bottom: ; */
+        padding-right: 50px;
+        text-align: center;
+        /* top: 0; */
+        height: 90%;
+        width: 25%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+        color: #FFFFFF;
+    }
+
+
+    .custom-p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+
+        margin-top: 320px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        color: #FFFFFF;
+
+        align-items: center;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex-direction: column;
+        /* padding-left: 50px; ; */
+        /* padding-top: ; */
+        /* padding-bottom: ; */
+        padding-right: 70px;
+        text-align: center;
+        top: 50px;
+        height: 90%;
+        width: 25%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+
+    }
+
+
+</style>
+
+
+<body>
+
+
+   
+    <div class="contentside">
+        <h1 class="custom-h1">Welcome</h1>
+        <p class="custom-p">Enter your personal details and start journey with us</p>
+    </div>	
+	
+<!-- 	
+        <ul class="nav nav-tabs nav-account" role="tablist" onkeydown="navigation(event)">           
+             <li role="none" class="reg"><a role="tab" aria-selected="false" aria-label="Register" title="Register" tabindex="-1">Register</a></li>
+        </ul>  -->
+    
+    
+    <!-- <ul class="nav nav-tabs nav-account" role="tablist" onkeydown="navigation(event)">
+		
+        <li role="none" class=""><a role="tab" aria-selected="false" href="/Account/Login/Register?returnUrl=%2FMyDonation%2F&invitationCode" aria-label="Register" title="Register" tabindex="-1">Register</a></li>
+		
+	</ul> -->
+
+    <script></script>
+</body>
+
+</html> 

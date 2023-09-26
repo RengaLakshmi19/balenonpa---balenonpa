@@ -1,0 +1,113 @@
+ 
+ <html>
+    <title>Profile</title>
+   {% include 'Baleno Master WebAPI Template' %}
+  <script>
+  function updateContactFunction(contact)
+  {
+    var value = {
+            "firstname": document.getElementById('firstName').value,
+            "telephone1": document.getElementById('telName').value
+    }
+    var url="/_api/contacts(" + contact + ")";
+   UpdateRecord(value,url);
+   
+  }
+</script>
+
+    <body>
+        <!--Fetching the User Details for the Logged in user--->
+        <!-- Not Using>
+        {% fetchxml contactDetails %}
+            <fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+            <entity name="contact">
+                <attribute name="name" />
+                <attribute name="emailaddress1" />        
+                <attribute name="mobilephone" />        
+                <attribute name="parentcustomerid" />        
+                <attribute name="firstname" />        
+                <attribute name="lastname" />
+                <attribute name="donotemail" />
+                <attribute name="donotphone" />
+                <attribute name="donotpostalmail" />
+                <attribute name="donotfax" />                
+                <order attribute="" descending="false" />
+                <filter type="and">
+                <condition attribute="statecode" operator="eq" value="0" />
+                <filter>
+                        <condition attribute="contactid" operator="eq" value="{{ user.id }}" />
+                    </filter>
+                </filter>
+            </entity>
+            </fetch>
+        {% endfetchxml %}
+        <!--Not Used -->
+
+        
+
+        {% if user %}
+
+        {% assign contact = entities.contact[user.id] %}  
+         <table align="center" contenteditable="true" cellpading="5" cellspacing="5">
+            <tr>
+                <td>
+                    <label> First Name </label> 
+                    <input type="text" name="firstName" id ="firstName" value="{{contact.firstname}}">
+                </td>
+                <td>
+                    <label> Last Name </label> 
+                    <input type="text" name="lastName" value="{{contact.lastname}}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> Email </label> 
+                    <input type="email" name="emailName" value="{{contact.emailaddress1}}">
+                </td>
+                <td>
+                    <label> Business Phone </label> 
+                    <input type="tel" name="telName" id="telName" value="{{contact.mobilephone}}">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label> Organization Name </label>
+                    <input type="text" name="orgName" value="{{contact.parentcustomerid}}"> 
+                </td>                
+            </tr>            
+            <tr>
+                <td colspan="2">
+                    <label> Preferred Language</label> 
+                </td>                
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label> How may we contact you? Select all that apply </label> 
+                </td>                 
+            </tr>
+            <tr>
+                <td colspan="2">
+                    {{ assign val = ""}}
+                    {{ if contact.donotemail==true}}
+                    {{ val="Checked"}}
+                   <input type="checkbox" value="{{ contact.donotemail }}" {{val}}>Email <br>
+                   <input type="checkbox" value="{{contact.donotfax}}">Fax <br>
+                   <input type="checkbox" value="{{contact.donotphone}}">Phone <br>
+                   <input type="checkbox" value="{{contact.donotpostalmail}}">Mail <br>
+                </td>                 
+            </tr>
+            <tr>
+                <td colspan="2">
+                   <button onclick="updateContactFunction('{{contact.id}}')" type="button">Update</button>
+                </td>                 
+            </tr>
+        </table>
+        {% else %}
+            <p>No Information Found for anonymous visitors.</p> 
+        {% endif %}
+
+
+    </body>
+ </html>
+ <p><p></p>
+ 

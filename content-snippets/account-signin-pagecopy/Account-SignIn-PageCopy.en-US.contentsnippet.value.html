@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <title>A Meaningful Page Title</title> -->
+</head>
+
+<style>
+    /*********		SIGN IN 		*******/
+    #content {
+        height: 530px;
+        /* background-color: #815714; */
+        padding: 2%;
+        width: 63%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 12%;
+        margin-bottom: 4%;
+        box-shadow: rgb(0 0 0 / 30%) 0px 19px 38px, rgb(0 0 0 / 22%) 0px 15px 12px;
+
+        /* background: #FF416C;
+                background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+                background: linear-gradient(to right, #FF4B2B, #FF416C);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 0 0;
+                color: #FFFFFF;
+                position: relative; */
+        /* left: -100%; */
+        /* height: 490px; 
+                width: 63%; */
+        /* transform: translateX(0);
+                transition: transform 0.6s ease-in-out; */
+
+        /* Style the container with the class "content" */
+        /* width: 300px; 
+                height: 150px; */
+
+        background: linear-gradient(to right, #f3a528 50%, #FFFFFF 50%);
+
+        /* background: linear-gradient(to top, #FFFFFF 83%, #f3a528 50%);  */
+
+        /* background: linear-gradient(to right, white 40%, #f3a528 20%, #f3a528 20%, #f52a56 50%, #f52a56 100%); */
+        /* background: linear-gradient(to right, #f3a528 0%, #f3a528 40%, red 40%, red 100%); */
+
+
+        border-radius: 20px;
+        /* border: 1px solid #ccc;  */
+        /* text-align: center;  */
+        /* display: flex; */
+        /* align-items: center; */
+        /* justify-content: center; */
+    }
+
+    .custom-h1 {
+        font-weight: bold;
+        margin-top: 100px;
+        margin-right: 0px;
+        margin-bottom: 40px;
+        margin-left: -5px;
+        align-items: center;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex-direction: column;
+        /* padding-left: 50px; ; */
+        /* padding-top: ; */
+        /* padding-bottom: ; */
+        padding-right: 50px;
+        text-align: center;
+        /* top: 0; */
+        height: 90%;
+        width: 25%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+        color: #FFFFFF;
+    }
+
+
+    .custom-p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+
+        margin-top: 330px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: -5px;
+        color: #FFFFFF;
+
+        align-items: center;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        flex-direction: column;
+        /* padding-left: 50px; ; */
+        /* padding-top: ; */
+        /* padding-bottom: ; */
+        padding-right: 50px;
+        text-align: center;
+        top: 50px;
+        height: 90%;
+        width: 25%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+
+    }
+
+
+
+
+
+    .col-md-6 {
+        /* position: relative; */
+        /* min-height: 1px; */
+        /* padding-left: 15px; */
+        /* padding-right: 15px; */
+
+
+        color: #161617;
+        margin-left: 350px;
+        /* margin-right: 100px; */
+    }
+
+    .nav.nav-tabs.nav-account {
+        /* background-color: #f3a528; */
+        margin-left: 350px;
+
+
+    }
+
+
+    .nav-account {
+        margin-top: 0px;
+        /* background-color: #f3a528; */
+
+
+    }
+
+    .nav-tabs {}
+
+    .nav-tabs>li.active>a:hover {
+        background-color: #e3981f;
+        color: #FFFFFF;
+
+    }
+
+    .nav-tabs>li.active>a:focus {
+        background-color: #f3a528;
+        color: #FFFFFF;
+    }
+
+    .nav-tabs>li.active>a {
+        color: #FFFFFF;
+        background-color: #f3a528;
+        border: 1px solid #ddd;
+        border-bottom-color: transparent;
+        cursor: default;
+    }
+
+
+
+    .nav-tabs>li>a:hover {
+        background-color: #f3a528;
+        color: #FFFFFF;
+
+    }
+
+    .nav-tabs>li>a:focus {
+        background-color: #f3a528;
+        color: #FFFFFF;
+    }
+
+    .nav-tabs>li>a {
+
+        color: #000000;
+        /* background-color: #f3a528;
+                border: 1px solid #ddd;
+                border-bottom-color: transparent;
+                cursor: default; */
+
+    }
+
+
+    .form-horizontal {
+        margin-bottom: 50px;
+    }
+
+
+
+
+    .xrm-attribute-value-encoded.xrm-attribute-value {
+        color: black;
+
+    }
+
+    .login-heading-section {
+        text-align: center;
+        padding-bottom: 8px !important;
+        /* margin-top: -100px; */
+        margin-bottom: 0px !important;
+
+    }
+    #local-login-heading {
+    margin-top: -10px;
+    }
+
+   
+
+    #external-login-heading {
+    border-top: 1px solid;
+    padding: 1rem;
+}
+
+
+    .form-group {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.control-label {
+    text-align: justify;
+    margin-bottom: 0;
+    padding-top: 2px;
+}
+
+.col-sm-8 {
+    width:100%;
+}
+.form-horizontal .control-label {
+    text-align: left;
+    margin-bottom: 0;
+    padding-top: 7px;
+}
+.col-sm-4 {
+    width: auto;
+}
+.form-horizontal .form-group{
+    margin-left: 1px !important;
+}
+
+
+    body {
+        background-color: #F6F5F7;
+        /* background-image: url(https://img.freepik.com/premium-photo/mockup-photo-frame-wooden-cabinet-with-beautiful-plants-3d-rendering_41470-3843.jpg); */
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+
+
+        /* background: #f6f5f7;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-family: 'Montserrat', sans-serif;
+                height: 100vh;
+                margin: -20px 0 50px; */
+
+    }
+
+    /* .button-container {
+                text-align: center; 
+            }
+            */
+    /* #submit-signin-local,.forgot-password {
+                display: block;
+                margin: 50px auto; 
+            } */
+
+
+    /* .forgot-password {
+                color: #664B8C;
+                font-size: 14px; 
+            } */
+    /* #submit-signin-local {
+                width: 208px;
+                background-color: red;
+                color: white;
+             
+                z-index: 1;
+            } */
+
+    /* .forgot-password {
+                color: #664B8C;
+                font-size: 14px;
+                position: relative; 
+                z-index: 2; 
+            } */
+
+
+    #submit-signin-local {
+        width: 150px;
+        /* background-color: white; */
+        /* left: 0; */
+        /* width: 50%; */
+        /* z-index: 1; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        border-radius: 20px;
+        border: 1px solid #f3a528;
+        background-color: #f3a528;
+        color: #FFFFFF;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+        /* Center the button horizontally and vertically */
+        /* background-color: white; 
+        border: 1px solid #f3a528;
+        color: #f3a528;
+        transition: transform 80ms ease-in, background-color 200ms ease-in, color 200ms ease-in; */
+
+
+
+
+    }
+
+    #submit-signin-local:hover {
+        background-color: #f3a528;
+        border: 1px solid #000000;
+        color: #000000;
+
+    }
+
+    /* .btn-primary{
+               
+               
+                display: flex;
+                justify-content: center;
+                align-items: center;  
+            
+            }  */
+
+
+    /* 
+            #submit-signin-local:active {
+                
+                transform: scale(0.95);
+                
+            
+            } */
+    #submit-signin-local:focus {
+        outline: none;
+    }
+
+    #submit-signin-local.ghost {
+        background-color: transparent;
+        border-color: #FFFFFF;
+    }
+
+    .alert-danger {
+        background-color: #ebccd1;
+        border-color: #ebccd1;
+        color: #000;
+        position: relative;
+        padding: 0px 100px 0px 0px;
+    }
+   
+
+    .alert {
+  
+         margin-bottom: -10px !important;
+    }
+
+
+    .alert-danger::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        bottom: 80%;
+        text-align: center;
+        font-size: 12px;
+        color: #000;
+
+    }
+
+    
+    .btn-default:hover {
+        background-color: white !important;
+        color: #f3a528 !important;
+        border-color: white !important;
+        
+
+
+    }
+
+    .btn-default {
+        position: absolute;
+        top: 40px;
+        /* Adjust the top value to control the vertical position */
+        left: 0;
+        /* display: inline-block; */
+
+
+    }
+
+
+    
+    .button2,
+    .btn-default {
+        color: black;
+        border-radius: 20px;
+        font-family: Helvetica;
+        font-weight: 600;
+        font-size: 14px;
+        border-color: white;
+        /* padding: 6px 29px; */
+        padding: 6px 71px;
+
+
+
+        border-style: solid;
+        background-color: transparent;
+
+        text-align: center;
+        position: relative;
+        transition: color 200ms ease-in;
+
+
+    }
+
+    .col-sm-offset-4 {
+    margin-left: 0% !important;
+}
+    button.btn.btn-primary.btn-line {
+        background-color: #F6F5F7;
+        /* border-color: #ffffffc6; */
+        color: black !important;
+        border-radius: 20px;
+        font-family: Helvetica;
+        font-weight: 600;
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    button.btn.btn-primary.btn-line :hover {
+        background-color: blanchedalmond !important;
+    }
+
+    /* .li,.active{
+                background-color: #F52A56; 
+            } */
+
+   
+
+    /* a[title*="Forgot your password?"] {
+                margin-left: 15%;
+                border-style: none;
+              
+                
+                
+                font-size: 14px;
+                text-decoration: none;
+                margin: 15px 0; 
+            
+            }  */
+    /* .nav>li>a:hover
+            {
+                background-color: #1276CE;
+                color: white;
+            } */
+
+    /* li.active
+            {
+                background-color: #1276CE;
+                color: white;
+                
+            } */
+
+
+
+
+    /* .col-sm-offset-4 {
+                margin-left: 33.33333%;
+            }
+            
+            
+            .col-sm-8 {
+                width: 66.66667%;
+            } */
+    .btn {
+        display: inline-block;
+        margin-bottom: 1px;
+        font-weight: normal;
+        /* text-align: center; */
+        /* vertical-align: middle; */
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        /* border: 1px solid transparent; */
+        /* white-space: nowrap; */
+        /* padding: 8px 20px 8px 8px !important; */
+        /* font-size: 15px; */
+        /* line-height: 1.42857; */
+        /* border-radius: 0; */
+        /* -webkit-user-select: none; */
+        /* -moz-user-select: none; */
+        /* -ms-user-select: none; */
+        /* user-select: none; */
+    }
+
+
+
+
+    
+    
+
+    /* Mobile Phones (Portrait and Landscape) */
+    @media screen and (max-width: 768px) {
+        #content {
+            width: 100%;
+            margin: 12% auto 4%;
+        }
+
+        .custom-h1,
+        .custom-p {
+            /* Adjust the styles for smaller screens */
+        }
+
+        .col-md-6 {
+            margin-left: 0;
+        }
+
+        /* Add more responsive styles as needed */
+    }
+
+    /* Tablets (Portrait) */
+    @media screen and (min-width: 769px) and (max-width: 991px) {
+        /* Add tablet-specific styles here */
+    }
+
+    /* Tablets (Landscape) and Laptops */
+    @media screen and (min-width: 992px) and (max-width: 1199px) {
+        /* Add tablet landscape and laptop-specific styles here */
+    }
+
+    /* Desktops and Larger Monitors */
+    @media screen and (min-width: 1200px) {
+        /* Add desktop and larger monitor-specific styles here */
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+<body>
+
+
+    <div class="contentside">
+        <h1 class="custom-h1">Welcome Back!</h1>
+        <p class="custom-p">Sign in to your account</p>
+    </div>
+
+    <script></script>
+</body>
+
+</html>

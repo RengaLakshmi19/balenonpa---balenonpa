@@ -1,0 +1,17 @@
+adx_accountrelationship: 
+adx_append: false
+adx_appendto: false
+adx_childTablePermissions: []
+adx_contactrelationship: 
+adx_create: false
+adx_delete: false
+adx_entitylogicalname: msnfp_transaction
+adx_entityname: All Donations Permission
+adx_entitypermission_webrole:
+- a774ebc6-2c59-ee11-be6f-6045bdaaa5d7
+adx_entitypermissionid: 71e5dc35-f5ea-453c-a40d-6dd20ff349f3
+adx_parententitypermission: 
+adx_parentrelationship: 
+adx_read: true
+adx_scope: 756150000
+adx_write: false

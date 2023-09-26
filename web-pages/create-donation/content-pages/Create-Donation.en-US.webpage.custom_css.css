@@ -1,0 +1,18 @@
+
+.col-lg-7 {
+    width: 50%;
+    text-align: center;
+}
+
+.col-lg-5 {
+    width: 50%;
+}
+.donate .donate-form {
+    padding: 201px 30px !important;
+    background: #FDBE33;
+    width: auto !important;
+}
+
+.footer {
+    margin-top: 122px;
+}

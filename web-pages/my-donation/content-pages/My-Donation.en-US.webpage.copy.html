@@ -1,0 +1,27 @@
+<div class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;"></div>
+<div data-ppid="633a4fc5-9da4-56a6-0817-20415ac0004f" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;">
+  <div data-ppid="78899155-b5aa-4625-0cb0-953011718e2b" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div data-ppid="18309362-d0c0-4eef-4a60-04a6680a6693" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;">
+      <button onclick="window.location.href='/Create-Donation'" type="button" value="Create-Donation" class="button2" style="margin-left: auto; margin-right: 0; width: fit-content;">Donate Now</button>
+      <div class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;"></div>
+      <p data-ppid="1dfdc362-4d6b-82c0-a519-33e4e8153503" style="color: var(--portalThemeColor1); text-align: center; background-image: linear-gradient(0deg, rgba(161, 159, 157, 0.3), rgba(161, 159, 157, 0.3));">
+        ​<b data-ppid="23896b3f-3410-2443-8707-83a0648147ac" aria-label="Text ​Transaction Press enter to edit" style="position: relative;">​<span data-ppid="549c3c5b-e1cd-1dde-da88-1f8c941c3dff" aria-label="Text Transaction Press enter to edit" style="position: relative;">Transaction</span></b>
+      </p>
+      {% include 'entity_list' key: 'Transactions' %}
+      <p data-ppid="44d56576-8b8c-d669-8cc8-1dec82cc1f59" style="color: var(--portalThemeColor1); text-align: center; background-image: linear-gradient(0deg, rgba(161, 159, 157, 0.3), rgba(161, 159, 157, 0.3));">​<b data-ppid="0dd9f97d-4eb9-57fa-c992-db9f107f425e" aria-label="Text Donor Commitments Press enter to edit" style="position: relative;">Donor Commitments&nbsp;</b></p>
+      {% include 'entity_list' key: 'Donor Commitments Entity List' %}
+      <p data-ppid="082b752e-d6af-ecb4-5e09-3370acbc3af1" style="color: var(--portalThemeColor1); text-align: center; background-image: linear-gradient(0deg, rgba(161, 159, 157, 0.3), rgba(161, 159, 157, 0.3));">​<b data-ppid="2fff686a-8352-f923-d975-137a2321b61a">Planned Giving</b></p>
+      {% include 'entity_list' key: 'Planned Giving Entity List' %}
+    </div>
+  </div>
+</div>
+<!-- Progress Bar when clicking DownloadReceipt Button  - ->
+<div id="loader">
+  <span id="text">Loading...</span>
+  <span id="percent"></span>
+  <div id="bar"></div>
+</div>
+<div id="help">Hover it</div>
+<!- - font family   - ->
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,500,400&display=swap" rel="stylesheet">
+<!- - End -->

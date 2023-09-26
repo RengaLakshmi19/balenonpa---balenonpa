@@ -1,0 +1,89 @@
+<head>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js" > </script >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" > </script >-->
+</head>
+<!-- Main Start -->
+<div class="main">
+  <div class="container-fluid">
+    <div class="main-content">
+      <div class="main-item">
+        <div class="main-img"><img src="/image_05.png" alt="Image" data-ppid="5d58fdbd-7636-5fea-081b-c6d5ab49f4ef" style="vertical-align: middle; max-width: 100%; width: 100%; height: 100%; object-fit: cover;" /></div>
+        <div class="main-text">
+          <h1 data-ppid="171deef3-1416-3c83-a88d-c92a7f48dcad">{{snippets["Baleno -Let be kind for children"]}}</h1>
+          <p data-ppid="9b4597b3-717e-81dd-de67-11c60fd1f8d5">{{snippets["Baleno -You have not lived today until you have done something for someone who can never repay you."]}}</p>
+          <div class="main-btn">
+            {% if user.id %}
+            <a href="{{ sitemarkers['Create Donation'].url }}" data-ppid="c587c528-f11f-890a-74a7-2f3a0ca46fb8" class="btn btn-custom" style="margin-right: 15px; color: rgb(255, 255, 255);">Donate Now</a>
+            {% else %}
+            <a href="{{ sitemarkers['Create-Custom-Signup-and-Donation-Page'].url }}" data-ppid="c587c528-f11f-890a-74a7-2f3a0ca46fb8" class="btn btn-custom" style="margin-right: 15px; color: rgb(255, 255, 255);">Donate Now</a>
+            {% endif %}
+
+            <!--    <a class="btn btn-custom btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">Watch Video</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Main End -->
+<!-- About Section Start -->
+<div class="about_section layout_padding">
+  <div data-ppid="df0d5c2c-6849-ab71-1f5c-3d3147d6a67a" class="container">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 data-ppid="ea653301-4163-d27f-1ec6-b874b0d61e0f" class="about_taital">{{snippets["Baleno - About Charity"]}}</h2>
+        <p data-ppid="2a7fc756-fbbc-c8e8-7418-871a3482fad4" class="about_text">{{snippets["Baleno - About Charity content"]}}</p>
+        <div class="readmore_bt"><a href="#" data-ppid="ebb69d17-4878-7151-9ce8-7df3e76d9573" style="width: 100%; float: left; text-align: center; font-size: 16px; background-color: transparent; padding-top: 8px; padding-right: 0px; padding-bottom: 8px; padding-left: 0px; text-transform: uppercase; color: rgb(0, 0, 0); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-left-color: rgb(0, 0, 0); border-image-source: initial; border-image-slice: initial; border-image-width: initial; border-image-outset: initial; border-image-repeat: initial;">Read more</a></div>
+      </div>
+      <div class="col-sm-4">
+        <div class="about_img"><img src="/about.png" data-ppid="f080af75-8545-8bc0-5b77-f3197b5e6f41" /></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About Section End -->
+<!-- About Programmes End -->
+{% include 'Baleno Master WebAPI Template' %} {% fetchxml designationDetails %}
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="msnfp_designation">
+    <attribute name="msnfp_name" />
+    <attribute name="msnfp_description" />
+    <attribute name="msnfp_designationid" />
+    <attribute name="baleno_designationuploadimagefile" />
+    <attribute name="baleno_image_url" />
+    <attribute name="baleno_image" />
+    <order attribute="msnfp_name" descending="false" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+    </filter>
+  </entity>
+</fetch>
+{% endfetchxml %}
+<div class="team">
+  <div class="container">
+    <div class="section-header text-center">
+      <p class="ourProgramme">{{snippets["Baleno- Our Programmes"]}}</p>
+      <h2>{{snippets["Baleno -Our Programme Content"]}}</h2>
+    </div>
+    <div class="row">
+      {% for result in designationDetails.results.entities %}
+      <div class="col-lg-4 col-md-6">
+        <div class="team-item">
+          <div class="team-img">
+            <img class="image" src="{{result.baleno_image_url}}" alt="Team Image" />
+          </div>
+          <div class="team-text">
+            <h2>{{ result.msnfp_name }}</h2>
+            <div class="team-social"><button class="btn btn-success btn-sm" onclick="createDonationPage('{{result.msnfp_designationid}}','{{user.id}}')">Donate Now</button>--></div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div data-ppid="952eacd8-4a07-13f2-34d8-ad1f5d87636e" class="row sectionBlockLayout text-left" style="margin: 0px -15px; display: flex; flex-wrap: wrap; min-height: auto; padding: 8px;">
+  <div data-ppid="78d42537-dd09-cbdb-ee0d-188878013140" class="container" style="max-width: 1300px; padding: 0px; display: flex; flex-wrap: wrap;"><div data-ppid="87675cdf-3f22-dd2a-adc1-9c3a8ac430e7" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"></div></div>
+</div>

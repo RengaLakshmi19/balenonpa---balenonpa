@@ -1,0 +1,11 @@
+adx_adx_columnpermissionprofile_webrole:
+- []
+- []
+- []
+adx_allcolumnpermissions:
+- Value: []
+- Value: []
+- Value: []
+adx_columnpermissionprofileid: ea26db05-9d41-ee11-be6e-002248d5d3db
+adx_profilename: Contact
+adx_tablename: contact

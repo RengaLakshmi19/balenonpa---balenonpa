@@ -1,0 +1,53 @@
+- adx_name: Restrict Read on Update Contact
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - e134920d-6245-ee11-be6f-002248d5d3db
+  adx_webpageaccesscontrolruleid: 4a1f71f3-16ba-05f4-d345-7a291f0fd1f9
+  adx_webpageid: c4a01d85-83c5-bf45-d7bf-af9d109bb1c5
+- adx_name: Restrict Read on Home
+  adx_right: 2
+  adx_scope: 2
+  adx_webpageaccesscontrolruleid: 57103c4d-9ef9-b2dd-054a-59f356fd278e
+  adx_webpageid: d5d3b7cb-9341-ee11-be6e-002248d5d3db
+  statecode: 1
+  statuscode: 2
+- adx_name: Restrict Read on My Donation
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - e8d3b7cb-9341-ee11-be6e-002248d5d3db
+  adx_webpageaccesscontrolruleid: 84e4c6b3-da47-ee11-be6f-002248d5d3db
+  adx_webpageid: 71539607-1bc6-da74-d8c3-84e0f786dc4b
+- adx_name: Restrict Read on Donation
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolruleid: b5539e0b-d347-ee11-be6f-002248d5d3db
+  adx_webpageid: 71539607-1bc6-da74-d8c3-84e0f786dc4b
+  statecode: 1
+  statuscode: 2
+- adx_adx_accesscontrolrule_publishingstate:
+  - []
+  adx_name: Baleno_All Donations Access
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolrule_webrole:
+  - a774ebc6-2c59-ee11-be6f-6045bdaaa5d7
+  adx_webpageaccesscontrolruleid: bdedf6c1-705b-ee11-8def-6045bdaaa5d7
+  adx_webpageid: b682e665-e92f-0a6f-2f40-fb9f49b5c21f
+- adx_name: Restrict Read on test
+  adx_right: 2
+  adx_scope: 1
+  adx_webpageaccesscontrolruleid: c206aa5e-f057-c236-7cc2-064d226caf18
+  adx_webpageid: f8da8c58-f1fe-6b0a-d933-6ef82efabaf2
+  statecode: 1
+  statuscode: 2
+- adx_name: Grant Change to Administrators
+  adx_right: 1
+  adx_scope: 1
+  adx_webpageaccesscontrolruleid: e5d3b7cb-9341-ee11-be6e-002248d5d3db
+  adx_webpageid: d5d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Grant Change to Content
+  adx_right: 1
+  adx_scope: 1
+  adx_webpageaccesscontrolruleid: e6d3b7cb-9341-ee11-be6e-002248d5d3db

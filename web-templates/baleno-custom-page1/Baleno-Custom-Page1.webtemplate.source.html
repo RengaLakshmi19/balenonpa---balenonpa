@@ -1,0 +1,61 @@
+<!--
+ <h2>List of Donations</h2>
+{% entityview logical_name:'msnfp_donorcommitment', name:'Donor Commitments' %}
+<p>We have {{ entityview.total_records }} Donor Commitments.</p>
+
+<table border="1"> 
+  {% for donation in entityview.records %}
+  <tr>
+  <td> 
+    {% if donation.msnfp_name %}
+    {{ donation.msnfp_name }}
+    {% endif %}
+  </td>
+  <td> 
+    {% if donation.msnfp_totalamount %}
+    {{ donation.msnfp_totalamount }}
+    {% endif %}
+  </td>
+  </tr>
+  {% endfor %}
+</table>
+{% endentityview %}
+<p></p>
+-->
+
+ 
+
+{% fetchxml DonorCommitment %}
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+  <entity name="msnfp_donorcommitment">
+    <attribute name="msnfp_name" />
+    <attribute name="msnfp_totalamount" />        
+    <order attribute="msnfp_name" descending="false" />
+    <filter type="and">
+      <condition attribute="statecode" operator="eq" value="0" />
+      <filter>
+            <condition attribute="msnfp_pledgedbycontactid" operator="eq" value="{{ user.id }}" />
+          </filter>
+     </filter>
+  </entity>
+</fetch>
+
+{% endfetchxml %}
+
+<table id="DonorCommitment" border="1" align="center">
+  <thead>
+    <tr>
+      <th>Company Name</th>
+      <th>Website</th>      
+     </tr>
+  </thead>
+<tbody>
+    {% for result in DonorCommitment.results.entities %}
+    <tr>
+      <td>{{ result.msnfp_name }} </td>
+      <td>{{ result.msnfp_totalamount }} </td>     
+     </tr>
+    {% endfor %}
+  </tbody>
+</table>
+<p><p>

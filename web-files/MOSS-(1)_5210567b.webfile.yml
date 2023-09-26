@@ -1,0 +1,110 @@
+adx_annotationId: 77eec8c9-e078-504c-0441-05a87f726d8e
+adx_name: MOSS (1)
+adx_summary: MOSS_DESCRIPTION
+adx_theme:
+  importUrls: []
+  color1: []
+  color2: []
+  color3: []
+  color4: []
+  color5: []
+  color6: []
+  color7: []
+  color8: []
+  color9: []
+  color10: []
+  color11: &o0 []
+  color12: *o0
+  primaryColor: []
+  headerColor: &o2 []
+  headerMenuTextColor: &o1 []
+  headerMenuHoverColor: &o13 []
+  bodyBackground: *o1
+  footerTextColor: *o1
+  footerColor: *o2
+  footerTextFont: &o8 []
+  footerTextWeight: &o5 []
+  footerTextSize: &o11 []
+  headerMenuTextFont: &o3 []
+  headerMenuTextWeight: &o4 []
+  headerMenuTextSize: &o10 []
+  headerMenuHoverStyle: &o12 []
+  siteTitlecolor: *o1
+  siteTitlefont: *o3
+  siteTitleweight: *o4
+  siteTitlesize: &o7 []
+  h1font: &o6 []
+  h1weight: *o5
+  h1size: []
+  h1color: *o2
+  h2font: *o6
+  h2weight: *o5
+  h2size: *o7
+  h2color: *o2
+  h3font: *o8
+  h3weight: *o5
+  h3size: &o9 []
+  h3color: *o2
+  h4font: *o6
+  h4weight: *o4
+  h4size: *o9
+  h4color: *o2
+  h5font: *o6
+  h5weight: *o4
+  h5size: *o10
+  h5color: *o2
+  p1font: *o8
+  p1weight: *o5
+  p1size: []
+  p1color: *o2
+  p2font: *o8
+  p2weight: *o5
+  p2size: *o11
+  p2color: *o2
+  afont: *o8
+  aweight: *o5
+  asize: *o10
+  atextcolor: *o2
+  astyle: *o12
+  aonhoverstyle: *o12
+  aonhovertextcolor: *o2
+  button1style: &o14 []
+  button1radius: &o15 []
+  button1font: *o6
+  button1weight: &o16 []
+  button1size: *o10
+  button1fillcolor: *o13
+  button1textcolor: *o2
+  button1onhoverstyle: *o14
+  button1onhoverfillcolor: []
+  button1onhovertextcolor: *o2
+  button2style: []
+  button2radius: *o15
+  button2font: *o6
+  button2weight: *o16
+  button2size: *o10
+  button2fillcolor: *o13
+  button2textcolor: *o13
+  button2onhoverstyle: *o14
+  button2onhoverfillcolor: *o13
+  button2onhovertextcolor: *o2
+  sectioncolumnmargintopbottom: []
+  sectioncolumncontentpadding: []
+  sectioncolumnmarginunit: &o17 []
+  sectioncolumnpaddingunit: *o17
+  isSelectedTheme: []
+  id: &o18 []
+  name: []
+  description: []
+  groupName: []
+  presetThemeId: *o18
+  isModified: []
+  annotationId: []
+adx_themeId: 9fbe5118-b883-48b5-81d6-09a78fedb035
+adx_webfileid: 77eec8c9-e078-504c-0441-05a87f726d8e
+annotationid: 94b8501b-8c53-ee11-be6f-6045bdc5ff9a
+filename: MOSS-1.scss
+isdocument: true
+mimetype: text/x-scss
+objectid: 77eec8c9-e078-504c-0441-05a87f726d8e
+objecttypecode: adx_webfile

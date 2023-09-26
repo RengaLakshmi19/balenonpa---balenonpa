@@ -1,0 +1,66 @@
+{% include 'Baleno Master WebAPI Template' %}
+{% include 'Baleno Designation CSS' %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+        function createDonationPage(designationId,UserId) {
+             if(UserId)
+                        location.replace("{{ sitemarkers['Create Donation'].url }}"+"?DesigId=" + designationId);
+            else
+                        location.replace("{{ sitemarkers['Create-Custom-Signup-and-Donation-Page'].url }}"+"?DesigId=" + designationId);    
+
+             //location.replace("https://balenonpa.powerappsportals.com/Create-Donation?DesigId=" + designationId)
+
+        }
+    </script>
+
+
+
+<!--Fetching the User Details for the Logged in user--->
+        {% fetchxml designationDetails %}
+<fetch version="1.0" output-format="xml-platform" mapping="logical" distinct="false">
+    <entity name="msnfp_designation">
+        <attribute name="msnfp_name" />
+        <attribute name="msnfp_description" />
+        <attribute name="msnfp_designationid" />
+        <attribute name="baleno_image" />
+        <attribute name="baleno_image_url" />
+        <order attribute="msnfp_name" descending="false" />
+        <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+        </filter>
+    </entity>
+</fetch>
+       {% endfetchxml %}
+<!--End Fetch -->
+
+<body>
+    <section class="designation">
+        <div class="designationcontainer">
+            <div class="event-ro row">
+                {% for result in designationDetails.results.entities %}
+                <div class="col-md-4 col-sm-6">
+                    <div class="event-box">
+                        <div class="emptyimage">
+                            {% if result.baleno_image %}
+                            <img class="image" src="{{result.baleno_image_url}}" alt="Image" /> <br />
+                            {% endif %}
+                        </div>
+
+                        <h4>{{ result.msnfp_name }}</h4>
+                        <p class="raises"><span>{{ result.msnfp_description }}</span></p>
+                        <button class="btn btn-success btn-sm" onclick="createDonationPage('{{result.msnfp_designationid}}','{{user.id}}')">Donate Now</button>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
+
+

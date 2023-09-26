@@ -1,0 +1,24 @@
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_name: Test_WebRole
+  adx_webroleid: 6231da28-3159-ee11-be6f-6045bdaaa5d7
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_name: Baleno_WebRole
+  adx_webroleid: a774ebc6-2c59-ee11-be6f-6045bdaaa5d7
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
+  adx_name: Web API User
+  adx_webroleid: e134920d-6245-ee11-be6f-002248d5d3db
+- adx_anonymoususersrole: true
+  adx_authenticatedusersrole: false
+  adx_name: Anonymous Users
+  adx_webroleid: e7d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: true
+  adx_name: Authenticated Users
+  adx_webroleid: e8d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_anonymoususersrole: false
+  adx_authenticatedusersrole: false
+  adx_name: Administrators
+  adx_webroleid: e9d3b7cb-9341-ee11-be6e-002248d5d3db

@@ -1,0 +1,16 @@
+adx_accountrelationship: 
+adx_append: true
+adx_appendto: false
+adx_childTablePermissions: []
+adx_contactrelationship: 
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: annotation
+adx_entityname: Portal Transaction Table Permission_Attachment
+adx_entitypermission_webrole: []
+adx_entitypermissionid: 5d99c12b-d29e-459a-9c81-8535151eeb03
+adx_parententitypermission: 1cd943ac-644d-ee11-be6f-002248d5d3db
+adx_parentrelationship: msnfp_transaction_Annotations
+adx_read: true
+adx_scope: 756150003
+adx_write: false

@@ -1,0 +1,13 @@
+adx_append: true
+adx_appendto: true
+adx_create: true
+adx_delete: true
+adx_entitylogicalname: contact
+adx_entityname: Portal Contact Form Table Permission
+adx_entitypermission_webrole:
+- e7d3b7cb-9341-ee11-be6e-002248d5d3db
+- e8d3b7cb-9341-ee11-be6e-002248d5d3db
+adx_entitypermissionid: 3f1d9057-bd41-ee11-be6e-002248d5d3db
+adx_read: true
+adx_scope: 756150000
+adx_write: true

@@ -1,0 +1,271 @@
+{% include 'Baleno Master WebAPI Template' %}
+{% include 'Baleno Create Donation Page - CSS' %}
+{% assign DesigId=request.params['DesigId'] %}
+{% assign UserId=user.id %}
+ {% assign ImageURL = "test" %}
+ {% if DesigId %}
+    {% assign designaion = entities['msnfp_designation'][DesigId] %}
+    {% assign ImageURL = designaion.baleno_image_url %}
+{%else%}
+    {% assign ImageURL = snippets["Baleno Donation Image URL"] %}
+{% endif %}
+
+
+ 
+
+
+<html>
+<head>
+    <title> Donation </title>
+    <script>
+        function ShowOtherAmountTextbox() {
+            checkOtherAmountFieldVisible();
+            var DonationAmountValue = document.getElementById("HiddenDonationAmount");
+            if (document.getElementById("opt1").checked) {
+                document.getElementById("give-other-amount").value = "";
+                DonationAmountValue.value = document.getElementById("opt1").value;
+            }
+            else if (document.getElementById("opt2").checked) {
+                document.getElementById("give-other-amount").value = "";
+                DonationAmountValue.value = document.getElementById("opt2").value;
+            }
+            else if (document.getElementById("opt3").checked) {
+                document.getElementById("give-other-amount").value = "";
+                DonationAmountValue.value = document.getElementById("opt3").value;
+            }
+            else if (document.getElementById("opt4").checked) {
+                document.getElementById("give-other-amount").value = "";
+                DonationAmountValue.value = document.getElementById("opt4").value;
+            }
+            else if (document.getElementById("opt5").checked) {
+                document.getElementById("give-other-amount").value = "";
+                DonationAmountValue.value = document.getElementById("opt5").value;
+            }
+            else {
+                DonationAmountValue.value = document.getElementById("give-other-amount").value;
+            }
+            amountValidation();
+        }
+
+        function checkOtherAmountFieldVisible() {
+            var chkYes = document.getElementById("opt6");
+            var dvPassport = document.getElementById("textBoxDiv");
+            var otheramount = document.getElementById("give-other-amount");
+            dvPassport.style.display = chkYes.checked ? "block" : "none";
+            otheramount.required = chkYes.checked ? true : false;
+        }
+
+        function amountValidation() {
+            var otheramount = document.getElementById("HiddenDonationAmount");
+            var dvPassport = document.getElementById("errorMsg");
+
+            if (otheramount.value == "") {
+                dvPassport.style.display = "block";
+                return;
+            }
+            else {
+                dvPassport.style.display = "none";
+            }
+        }
+
+        function createDonationFunction(DesigId) {
+            checkOtherAmountFieldVisible();
+            amountValidation();
+            var amount = document.getElementById('HiddenDonationAmount').value;
+            amount = amount != "" ? parseInt(amount) : null;
+            var isConnectWithUS = document.getElementById('continueAsDonor');
+            isConnectWithUS = isConnectWithUS.checked==true ? true : false;
+            var firstName=document.getElementById("firstname").value;
+            var lastName=document.getElementById("lastname").value;
+            var email=document.getElementById("email").value;
+            var DesigId = DesigId;
+            var FlowUrL = "https://prod-03.centralindia.logic.azure.com:443/workflows/ebb7995c74c341dd9c4d9444daf186a1/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=yku6rQ9nQtdf1atjX0EtJNjCbaq1rEToVKFy012pXVg";
+            let body = {
+                    "firstname": firstName,
+                    "lastname": lastName,
+                    "email" : email,
+                    "baleno_createdbychannel" : 2,
+                    "baleno_sendinvitewhensignup" : isConnectWithUS,
+                    "msnfp_totalamount" : amount,
+                    "msnfp_commitment_defaultdesignationid" : DesigId
+
+                };
+                CallPowerAutomateFlow(FlowUrL, body);         
+       // alert("Contact Record Created.");
+        }
+
+        function CallPowerAutomateFlow(flowURL, RequestData) {
+    debugger;
+     let req = new XMLHttpRequest();
+    req.open("POST", flowURL, true);
+    req.setRequestHeader("Content-Type", "application/json");
+    req.onreadystatechange = function () {
+        if (this.readyState === 4) {
+            req.onreadystatechange = null;
+            if (this.status === 200 || this.status === 202) {
+                var result = JSON.parse(this.response); 
+                var message='';
+               if(result.Message !=""){
+message=result.Message;
+               }
+             //  alert(message);
+            } else {
+                console.log(this.statusText);
+             }
+        }
+    };
+    req.send(JSON.stringify(RequestData));
+}
+    </script>
+   
+</head>
+
+<body style="background-color:antiquewhite">
+    <!--<div class="donationImageCSS"> -->
+    <div class="container">
+        <!--<div class="donate" data-parallax="scroll" data-image-src="img/donate.jpg">-->
+        <div class="donate">
+            <div class="row align-items-center">
+                <div class="col-lg-4">
+                    <div class="donate-content">
+                        {% if DesigId %}
+                        {% assign designaion = entities['msnfp_designation'][DesigId] %}
+                        <div class="section-header">
+                            <p class="donatenow">Donate For {{designaion.msnfp_name}}</p>
+                            <!--<h3>{{designaion.msnfp_description }}</h3>-->
+                        </div>
+                        <div class="donate-text">
+                            <p class="designationpara">
+                                {{designaion.msnfp_description }}
+                                <div>
+                                    <img src="{{designaion.baleno_image_url}}" alt="Image" />
+                                </div>
+                                <!-- Your donation will be used to purchase materials and develop activities for our local and international programs. Give children around the world the knowledge, confidence, and inspiration to follow their passion for science technology engineering and math!
+                                -->
+                            </p>
+                        </div>
+                        {% else %}
+
+                        <div class="section-header">
+                            <p class="donatenow">{{snippets["Baleno - Donate Now"]}}</p>
+                            <h2>{{snippets["Baleno - Donate without designation paragraph Header"]}}</h2>
+                        </div>
+                        <div class="donate-text">
+                            <p>
+                                {{snippets["Baleno - Donate without designation paragraph Content"]}}
+                            </p>
+                        </div>
+                        <!--<div class="col-sm-8">
+                            <img src="/Baleno_Donation_Image.jpg"/>test</div>
+                        </div>-->
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="donate-form">
+                        <form>
+                            <table border="0" align="center">
+                                <tr>
+                                    <td width="40%">
+                                        <div class="control-group">
+                                            <input type="text" id="firstname" class="form-control" placeholder="First Name" required="required" />
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <td width="40%">
+                                        <div class="control-group">
+                                            <input type="text" id="lastname" class="form-control" placeholder="Last Name" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div class="control-group">
+                                            <input type="email" id="email" class="form-control" placeholder="Email" required="required" />
+                                        </div>
+                                    </td>
+                                    <td>&nbsp;&nbsp;</td>
+                                    <!--<td width="40%">
+                                        <div class="control-group">
+                                            <input type="number" class="form-control" placeholder="PhoneNumber" required="required" />
+                                        </div>
+                                    </td>-->
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <br>
+
+                                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-custom">
+                                                <input type="radio" name="options" id="opt1" onchange="ShowOtherAmountTextbox()" value="100"> 100
+                                            </label>&nbsp;&nbsp;&nbsp;
+                                            <label class="btn btn-custom">
+                                                <input type="radio" name="options" id="opt2" onchange="ShowOtherAmountTextbox()" value="500"> 500
+                                            </label>&nbsp;&nbsp;&nbsp;
+                                            <label class="btn btn-custom">
+                                                <input type="radio" name="options" id="opt3" onchange="ShowOtherAmountTextbox()" value="1000"> 1000
+                                            </label> &nbsp;&nbsp;&nbsp;
+                                            <label class="btn btn-custom">
+                                                <input type="radio" name="options" id="opt4" onchange="ShowOtherAmountTextbox()" value="5000"> 5000
+                                            </label>&nbsp; &nbsp;  &nbsp;
+                                            <label class="btn btn-custom">
+                                                <input type="radio" name="options" id="opt5" onchange="ShowOtherAmountTextbox()" value="10000"> 10000
+                                            </label>&nbsp;&nbsp;&nbsp;
+                                            <label class="btn btn-custom">
+                                                <input type="radio" name="options" id="opt6" onchange="ShowOtherAmountTextbox()" value="Other">Other
+                                            </label>      &nbsp;
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td></td>
+                                    <td>
+                                        <div class="hideOtherTextBoxStyle" id="textBoxDiv" align="right">
+                                            <input id="give-other-amount" type="text" placeholder="Enter Amount" onchange="ShowOtherAmountTextbox()" class="form-control"><br>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        <!--<div class="checkbox-wrapper-1">-->
+                                        <div>
+                                            <input id="continueAsDonor" class="substituted" type="checkbox" aria-hidden="true" title="If you select this, your contact will be stored in our database." />
+                                            <label for="continueAsDonor">Do You wish to connect with us</label>
+                                            <label><em> (If you check this, you will get an email with an invitation code.)</em></label>
+
+                                       </div>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="3">
+                                        <div align="center">
+                                            <br>
+                                            <label id="errorMsg" class="hideOtherTextBoxStyle">Please give the Amount</label>
+                                            <button class="btn btn-custom" type="submit" onclick="createDonationFunction('{{DesigId}}')">Donate Now</button>
+                                            <input id="HiddenDonationAmount" type="hidden" />
+                                        </div>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,17 @@
+adx_accountrelationship: 
+adx_append: true
+adx_appendto: true
+adx_childTablePermissions: []
+adx_contactrelationship: 
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: contact
+adx_entityname: Donor
+adx_entitypermission_webrole:
+- e8d3b7cb-9341-ee11-be6e-002248d5d3db
+adx_entitypermissionid: bc8347ac-ae41-ee11-be6e-002248d5d3db
+adx_parententitypermission: 
+adx_parentrelationship: 
+adx_read: true
+adx_scope: 756150004
+adx_write: true

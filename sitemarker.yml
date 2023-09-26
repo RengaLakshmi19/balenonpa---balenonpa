@@ -1,0 +1,35 @@
+- adx_name: Event Feedback
+  adx_sitemarkerid: 71d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Home
+  adx_pageid: d5d3b7cb-9341-ee11-be6e-002248d5d3db
+  adx_sitemarkerid: 72d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Knowledge Base
+  adx_sitemarkerid: 73d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Poll Archives
+  adx_sitemarkerid: 74d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Knowledge Base Search Results
+  adx_sitemarkerid: 75d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Profile
+  adx_pageid: d8d3b7cb-9341-ee11-be6e-002248d5d3db
+  adx_sitemarkerid: 76d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Search
+  adx_pageid: e2d3b7cb-9341-ee11-be6e-002248d5d3db
+  adx_sitemarkerid: 77d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Default Offline Page
+  adx_pageid: dcd3b7cb-9341-ee11-be6e-002248d5d3db
+  adx_sitemarkerid: 78d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Access Denied
+  adx_pageid: d6d3b7cb-9341-ee11-be6e-002248d5d3db
+  adx_sitemarkerid: 79d3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: Page Not Found
+  adx_pageid: d2d3b7cb-9341-ee11-be6e-002248d5d3db
+  adx_sitemarkerid: 7ad3b7cb-9341-ee11-be6e-002248d5d3db
+- adx_name: My Donation
+  adx_pageid: 71539607-1bc6-da74-d8c3-84e0f786dc4b
+  adx_sitemarkerid: c9595ed3-5d50-ee11-be6e-002248d5d3db
+- adx_name: Create Donation
+  adx_pageid: e5f57d93-99f2-3531-a3b5-5a858d9180be
+  adx_sitemarkerid: cfade64a-5e50-ee11-be6e-002248d5d3db
+- adx_name: Create-Custom-Signup-and-Donation-Page
+  adx_pageid: 1fda4c5f-6023-0389-e7ed-b366cdabf3c3
+  adx_sitemarkerid: f820306a-5e50-ee11-be6e-002248d5d3db

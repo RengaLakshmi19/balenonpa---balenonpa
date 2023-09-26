@@ -1,0 +1,12 @@
+adx_append: false
+adx_appendto: false
+adx_create: true
+adx_delete: false
+adx_entitylogicalname: adx_portallanguage
+adx_entityname: Languages
+adx_entitypermission_webrole:
+- e8d3b7cb-9341-ee11-be6e-002248d5d3db
+adx_entitypermissionid: ef6b617a-ac45-ee11-be6f-002248d5d3db
+adx_read: true
+adx_scope: 756150000
+adx_write: true
